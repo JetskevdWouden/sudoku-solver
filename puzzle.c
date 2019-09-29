@@ -1,4 +1,4 @@
-// #include "sudoku.h"
+#include "sudoku.h"
 
 //returns a pointer to an array of ints
 int **createPuzzle()
@@ -6,17 +6,17 @@ int **createPuzzle()
     //variable to return --> pointer to an array of ints
     int **puzzle;
     int i, j;
-    int array[9][9] = {0, 1, 9, 0, 0, 2, 0, 0, 0,
-                       4, 7, 0, 6, 9, 0, 0, 0, 1,
-                       0, 0, 0, 4, 0, 0, 0, 9, 0,
+    int array[9][9] = {0, 1, 9,     0, 0, 2,    0, 0, 0,
+                       4, 7, 0,     6, 9, 0,    0, 0, 1,
+                       0, 0, 0,     4, 0, 0,    0, 9, 0,
 
-                       8, 9, 4, 5, 0, 7, 0, 0, 0,
-                       0, 0, 0, 0, 0, 0, 0, 0, 0,
-                       0, 0, 0, 2, 0, 1, 9, 5, 8,
+                       8, 9, 4,     5, 0, 7,    0, 0, 0,
+                       0, 0, 0,     0, 0, 0,    0, 0, 0,
+                       0, 0, 0,     2, 0, 1,    9, 5, 8,
 
-                       0, 5, 0, 0, 0, 6, 0, 0, 0,
-                       6, 0, 0, 0, 2, 8, 0, 7, 9,
-                       0, 0, 0, 1, 0, 0, 8, 6, 0};
+                       0, 5, 0,     0, 0, 6,    0, 0, 0,
+                       6, 0, 0,     0, 2, 8,    0, 7, 9,
+                       0, 0, 0,     1, 0, 0,    8, 6, 0};
 
     puzzle = (int **)malloc(sizeof(int *) * 9);
 
@@ -45,6 +45,6 @@ void printPuzzle(int **puzzle)
             //print int plus spaces
             printf(" %d ", puzzle[i][j]);
         }
-        printf("/n");
+        printf("\n");
     }
 }
