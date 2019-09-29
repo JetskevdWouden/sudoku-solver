@@ -36,15 +36,24 @@ void printPuzzle(int **puzzle)
 {
     int i, j;
 
-    printf(" ");
+    printf("-------------------------------\n");
     for (i = 0; i < 9; i++)
     {
+        printf("|");
         //print each row - then break /n
         for (j = 0; j < 9; j++)
         {
             //print int plus spaces
             printf(" %d ", puzzle[i][j]);
+            if (((j + 1) % 3) == 0)
+            {
+                printf("|");
+            }
         }
         printf("\n");
+        if (((i + 1) % 3) == 0)
+        {
+            printf("-------------------------------\n");
+        }
     }
 }
